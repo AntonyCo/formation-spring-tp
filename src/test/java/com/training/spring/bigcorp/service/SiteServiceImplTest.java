@@ -21,6 +21,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.Collections;
 import java.util.Set;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes =
         {SiteServiceImplTest.SiteServiceTestConfiguration.class})
@@ -37,7 +39,7 @@ public class SiteServiceImplTest {
     private CaptorService captorService;
 
     @InjectMocks
-    private SiteServiceImpl siteService;
+    private SiteServiceImpl siteServiceImpl;
 
     @Before
     public void init(){
@@ -50,10 +52,10 @@ public class SiteServiceImplTest {
         String siteId = null;
 
         // Appel du SUT
-        Site site = siteService.findById(siteId);
+        Site site = siteServiceImpl.findById(siteId);
 
         // Vérification
-        Assertions.assertThat(site).isNull();
+        assertThat(site).isNull();
     }
 
     @Test
@@ -64,23 +66,27 @@ public class SiteServiceImplTest {
         Mockito.when(captorService.findBySite(siteId)).thenReturn(expectedCpators);
 
         // Appel du SUT
-        Site site = siteService.findById(siteId);
+        Site site = siteServiceImpl.findById(siteId);
 
         // Vérification
-        Assertions.assertThat(site.getId()).isEqualTo(siteId);
-        Assertions.assertThat(site.getName()).isEqualTo("Florange");
-        Assertions.assertThat(site.getCaptors()).isEqualTo(expectedCpators);
+        assertThat(site.getId()).isEqualTo(siteId);
+        assertThat(site.getName()).isEqualTo("Florange");
+        assertThat(site.getCaptors()).isEqualTo(expectedCpators);
     }
 
     @Test
     public void readFileFromUrl(){
         siteService.readFile("url:https://dev-mind.fr/lorem.txt");
-        assertThat(output.toString(), containsString("Lorem ipsum dolor sit amet, consectetur adipiscing elit"));
+        assertThat(output.toString()).contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
     }
     @Test
     public void readFileFromClasspath(){
+        siteService.readFile("classpath:lorem.txt");
+        assertThat(output.toString()).contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
     }
     @Test
     public void readFileFromFileSystem(){
+        siteService.readFile("file:C:/Users/formation/Desktop/lorem.txt");
+        assertThat(output.toString()).contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
     }
 }
