@@ -6,14 +6,20 @@ import com.training.spring.bigcorp.model.MeasureStep;
 import com.training.spring.bigcorp.model.PowerSource;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.time.Instant;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration (classes = {MeasureServiceConfigurationTest.class})
 public class FixedMeasureServiceTest {
+    @Autowired
     private FixedMeasureService service;
     /**
      * Captor used in tests
@@ -27,11 +33,6 @@ public class FixedMeasureServiceTest {
      * End instant used in tests. We define a one day period
      */
     Instant end = start.plusSeconds(60 * 60 * 24);
-
-    @Before
-    public void init() {
-        service = new FixedMeasureService();
-    }
 
     @Test
     public void readMeasuresThrowsExceptionWhenArgIsNull() {
