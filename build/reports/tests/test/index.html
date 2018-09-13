@@ -20,25 +20,25 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">14</div>
+<div class="counter">16</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">8</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.336s</div>
+<div class="counter">4.968s</div>
 <p>duration</p>
 </div>
 </td>
@@ -48,7 +48,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">42%</div>
+<div class="percent">93%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,50 +61,34 @@
 <a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Packages</a>
+<a href="#tab1">Ignored tests</a>
 </li>
 <li>
-<a href="#tab2">Classes</a>
+<a href="#tab2">Packages</a>
+</li>
+<li>
+<a href="#tab3">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <ul class="linkList">
 <li>
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html">SiteServiceImplTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html#findById">findById</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html">SiteServiceImplTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html#findByIdShouldReturnNullWhenIdIsNull">findByIdShouldReturnNullWhenIdIsNull</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html">SiteServiceImplTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html#readFileFromClasspath">readFileFromClasspath</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html">SiteServiceImplTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html#readFileFromFileSystem">readFileFromFileSystem</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html">SiteServiceImplTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html#readFileFromUrl">readFileFromUrl</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.measure.FixedMeasureServiceTest.html">FixedMeasureServiceTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.measure.FixedMeasureServiceTest.html#readMeasures">readMeasures</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.measure.RealMeasureServiceTest.html">RealMeasureServiceTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.measure.RealMeasureServiceTest.html#readMeasures">readMeasures</a>
-</li>
-<li>
-<a href="classes/com.training.spring.bigcorp.service.measure.SimulatedMeasureServiceTest.html">SimulatedMeasureServiceTest</a>.
-<a href="classes/com.training.spring.bigcorp.service.measure.SimulatedMeasureServiceTest.html#readMeasures">readMeasures</a>
+<a href="classes/com.training.spring.bigcorp.BigCorpApplicationTest.html">BigCorpApplicationTest</a>.
+<a href="classes/com.training.spring.bigcorp.BigCorpApplicationTest.html#run">run</a>
 </li>
 </ul>
 </div>
 <div id="tab1" class="tab">
+<h2>Ignored tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/com.training.spring.bigcorp.mockitoTest.MusicCatalogTest.html">MusicCatalogTest</a>.
+<a href="classes/com.training.spring.bigcorp.mockitoTest.MusicCatalogTest.html#testSearchAlbumByArtist">testSearchAlbumByArtist</a>
+</li>
+</ul>
+</div>
+<div id="tab2" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -119,39 +103,49 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="packages/com.training.spring.bigcorp.html">com.training.spring.bigcorp</a>
 </td>
 <td>1</td>
+<td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0.904s</td>
-<td class="success">100%</td>
+<td>3.523s</td>
+<td class="failures">0%</td>
 </tr>
 <tr>
-<td class="failures">
+<td class="skipped">
+<a href="packages/com.training.spring.bigcorp.mockitoTest.html">com.training.spring.bigcorp.mockitoTest</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>0.348s</td>
+<td class="skipped">100%</td>
+</tr>
+<tr>
+<td class="success">
 <a href="packages/com.training.spring.bigcorp.service.html">com.training.spring.bigcorp.service</a>
 </td>
 <td>7</td>
-<td>5</td>
 <td>0</td>
-<td>0.096s</td>
-<td class="failures">28%</td>
+<td>0</td>
+<td>1.048s</td>
+<td class="success">100%</td>
 </tr>
 <tr>
-<td class="failures">
+<td class="success">
 <a href="packages/com.training.spring.bigcorp.service.measure.html">com.training.spring.bigcorp.service.measure</a>
 </td>
 <td>6</td>
-<td>3</td>
 <td>0</td>
-<td>0.336s</td>
-<td class="failures">50%</td>
+<td>0</td>
+<td>0.049s</td>
+<td class="success">100%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab3" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -166,13 +160,22 @@
 </thead>
 <tbody>
 <tr>
-<td class="success"/>
+<td class="failures"/>
 <a href="classes/com.training.spring.bigcorp.BigCorpApplicationTest.html">com.training.spring.bigcorp.BigCorpApplicationTest</a>
 <td>1</td>
+<td>1</td>
 <td>0</td>
+<td>3.523s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="skipped"/>
+<a href="classes/com.training.spring.bigcorp.mockitoTest.MusicCatalogTest.html">com.training.spring.bigcorp.mockitoTest.MusicCatalogTest</a>
+<td>2</td>
 <td>0</td>
-<td>0.904s</td>
-<td class="success">100%</td>
+<td>1</td>
+<td>0.348s</td>
+<td class="skipped">100%</td>
 </tr>
 <tr>
 <td class="success"/>
@@ -180,44 +183,44 @@
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>0.095s</td>
+<td>0.099s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
-<td class="failures"/>
+<td class="success"/>
 <a href="classes/com.training.spring.bigcorp.service.SiteServiceImplTest.html">com.training.spring.bigcorp.service.SiteServiceImplTest</a>
 <td>5</td>
-<td>5</td>
 <td>0</td>
-<td>0.001s</td>
-<td class="failures">0%</td>
+<td>0</td>
+<td>0.949s</td>
+<td class="success">100%</td>
 </tr>
 <tr>
-<td class="failures"/>
+<td class="success"/>
 <a href="classes/com.training.spring.bigcorp.service.measure.FixedMeasureServiceTest.html">com.training.spring.bigcorp.service.measure.FixedMeasureServiceTest</a>
 <td>2</td>
-<td>1</td>
 <td>0</td>
-<td>0.329s</td>
-<td class="failures">50%</td>
+<td>0</td>
+<td>0.037s</td>
+<td class="success">100%</td>
 </tr>
 <tr>
-<td class="failures"/>
+<td class="success"/>
 <a href="classes/com.training.spring.bigcorp.service.measure.RealMeasureServiceTest.html">com.training.spring.bigcorp.service.measure.RealMeasureServiceTest</a>
 <td>2</td>
-<td>1</td>
 <td>0</td>
-<td>0.002s</td>
-<td class="failures">50%</td>
+<td>0</td>
+<td>0.006s</td>
+<td class="success">100%</td>
 </tr>
 <tr>
-<td class="failures"/>
+<td class="success"/>
 <a href="classes/com.training.spring.bigcorp.service.measure.SimulatedMeasureServiceTest.html">com.training.spring.bigcorp.service.measure.SimulatedMeasureServiceTest</a>
 <td>2</td>
-<td>1</td>
 <td>0</td>
-<td>0.005s</td>
-<td class="failures">50%</td>
+<td>0</td>
+<td>0.006s</td>
+<td class="success">100%</td>
 </tr>
 </tbody>
 </table>
@@ -230,7 +233,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.4</a> at 12 sept. 2018 00:09:24</p>
+<a href="http://www.gradle.org">Gradle 4.4</a> at 12 sept. 2018 14:47:50</p>
 </div>
 </div>
 </body>

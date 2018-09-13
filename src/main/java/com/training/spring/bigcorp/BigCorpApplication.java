@@ -1,10 +1,9 @@
 package com.training.spring.bigcorp;
 
+import com.training.spring.bigcorp.config.BigCorpApplicationConfig;
 import com.training.spring.bigcorp.model.ApplicationInfo;
-import com.training.spring.bigcorp.service.SiteService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BigCorpApplication {
 

@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     compile "org.springframework:spring-context:${springVersion}"
+    compile "org.aspectj:aspectjweaver:1.8.13"
     testCompile "org.springframework:spring-test:${springVersion}"
     testCompile "junit:junit:4.12"
     testCompile "org.mockito:mockito-core:2.19.0"

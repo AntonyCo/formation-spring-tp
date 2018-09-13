@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.training.spring.bigcorp.mockitoTest.MusicCatalogTest" tests="2" skipped="1" failures="0" errors="0" timestamp="2018-09-12T12:47:48" hostname="DESKTOP-384HBT0" time="0.348">
+  <properties/>
+  <testcase name="testSearchAlbumByArtist" classname="com.training.spring.bigcorp.mockitoTest.MusicCatalogTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testSearchAlbumWithNullValues" classname="com.training.spring.bigcorp.mockitoTest.MusicCatalogTest" time="0.348"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

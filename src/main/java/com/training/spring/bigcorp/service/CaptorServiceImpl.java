@@ -1,5 +1,6 @@
 package com.training.spring.bigcorp.service;
 
+import com.training.spring.bigcorp.config.Monitored;
 import com.training.spring.bigcorp.model.Captor;
 import com.training.spring.bigcorp.service.measure.MeasureService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ public class CaptorServiceImpl implements CaptorService{
     }
 
     @Override
+    @Monitored
     public Set<Captor> findBySite(String siteId) {
         Set<Captor> captors = new HashSet<>();
         if (siteId == null) {

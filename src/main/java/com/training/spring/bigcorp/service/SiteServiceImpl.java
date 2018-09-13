@@ -1,11 +1,10 @@
 package com.training.spring.bigcorp.service;
 
+import com.training.spring.bigcorp.config.Monitored;
 import com.training.spring.bigcorp.model.Site;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -28,6 +27,7 @@ public class SiteServiceImpl implements SiteService {
         this.captorService = captorService;
     }
     @Override
+    @Monitored
     public Site findById(String siteId) {
         System.out.println("Appel de findById :" + this);
         if (siteId == null) {
